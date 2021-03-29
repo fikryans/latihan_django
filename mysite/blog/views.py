@@ -2,5 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("<center><h1>Hello World!</h1></center>")
+    first_name = 'Fikri'
+    last_name = 'Aja'
+
+    context = {
+        'first_name':first_name,
+        'last_name':last_name,
+    }
+    return render(request, "index.html", context)
 
